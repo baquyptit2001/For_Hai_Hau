@@ -43,6 +43,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         var audioElement = document.createElement('audio');
+        var fart = 0;
         audioElement.setAttribute('src', 'y2mate.com - Fart  Gaming Sound Effect HD.mp3');
         $(document).ready(function(){
             $('.open').hide()
@@ -51,7 +52,10 @@
                 $('.open').toggle()
                 $('.close').toggle()
                 $('.text').toggle()
-                audioElement.play()
+                if(fart%2==0){
+                    audioElement.play()
+                }
+                fart++
             })
         });
     </script>
